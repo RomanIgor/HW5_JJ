@@ -10,7 +10,7 @@ public class Client2 {
 
     public static void main(String[] args) throws IOException {
         final Socket client = new Socket("localhost", Server.PORT);
-        // the reading
+        // The reading
         new Thread(() -> {
             try (Scanner input = new Scanner(client.getInputStream())) {
                 while (input.hasNextLine()) {
